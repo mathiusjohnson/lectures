@@ -20,7 +20,17 @@ Examples:
 */
 
 const tempConverter = function(value, cToF) {
+  if (typeof value !== 'number') {
+    return NaN;
+  }
 
+  if (cToF) {
+    const fahrenheit = (value * 9/5) + 32;
+    return Number(fahrenheit.toFixed(1));
+  }
+
+  const celsius = (value - 32) * 5/9;
+  return Number(celsius.toFixed(1));
 };
 
 

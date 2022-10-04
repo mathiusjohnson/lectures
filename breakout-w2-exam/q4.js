@@ -28,6 +28,16 @@ Examples:
 
 const minmax = function(list) {
 
+  if (typeof list[0] === 'number') {
+    list.sort((a,b) => a - b);
+  } else {
+    list.sort();
+  }
+
+  const smallest = list[0];
+  const largest = list[list.length - 1];
+
+  return [smallest, largest]
 };
 
 // Don't change below:

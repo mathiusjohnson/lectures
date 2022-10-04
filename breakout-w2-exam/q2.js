@@ -18,7 +18,19 @@ Examples:
 */
 
 const countWhich = function(list, cb) {
+  if (!Array.isArray(list)) {
+    return false;
+  }
 
+  return list.filter(cb).length
+  // let count = 0;
+
+  // for (const item of list) {
+  //   if (cb(item)) {
+  //     count++
+  //   }
+  // }
+  // return count;
 };
 
 // Don't change below:
